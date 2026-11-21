@@ -96,9 +96,13 @@ background:#b3d8c3;}
 
 main p{margin-bottom:20px;font-size:20px;}
 
+#summary{margin-bottom:40px;}
+
 main h2{margin-bottom:10px;}
 
 /*PROXIMITY:heading is close to related information.*/
 main ul{padding:10px;line-height: 1.5;padding-top:0;}
 
 main li{font-size:20px;padding-bottom:10px;}
+
+audio{margin:20px;}
