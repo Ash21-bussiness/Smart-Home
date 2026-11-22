@@ -52,7 +52,7 @@ line-height:2.5;}
     margin-bottom:10px;  /** margin-bottom:10px adds space below the video **/
     object-fit:cover; /** object-fit:cover makes the video fill the entire container while maintaining its aspect ratio **/
     border-radius:5px;  /** border-radius:5px adds rounded corners to the video **/
-    border: 2px solid white;  /** border: 2px solid white adds a white border around the video **/
+    border: 2px solid #EAF0F8;  /** border: 2px solid #EAF0F8 adds a light gray border around the video **/
     align-self:center;} /** align-self:center centers the video vertically within its container **/
 
 /**aside**/
