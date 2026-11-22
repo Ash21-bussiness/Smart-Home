@@ -139,8 +139,8 @@ padding:10px;          /** padding:10px adds space inside the footer **/
 color:azure;
 background-color:#172554;
 }
-footer p{display:block;
-    font-size:20px;
+footer p{display:block; /** display:block makes the paragraph take up the full width of its container **/
+    font-size:20px; 
     text-align:center;
-    line-height:0;
-margin-top:10px;}
+    line-height:0;/** line-height:0 removes the space between lines of text **/
+margin-top:10px;} /** margin-top:10px adds space above the paragraph **/
