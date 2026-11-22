@@ -1,99 +1,108 @@
-*{box-sizing:border-box;
+/*Iman Fatima, 445006855*/
+/*COLORS: white,black,#d9f5e0,#2a6644,#b3d8c3,#6ba284*/
+
+*{box-sizing:border-box; /*width=width+padding+border*/ 
     padding:0;
     margin:0;}
 
-body{background:#d9f5e0;
-    color:black;
-    font-family:'Gill Sans','Gill Sans MT';
-    margin:0 auto;
+/*CONTRAST:the text and bg color are very different in value which makes it easy to read*/
+body{background:#d9f5e0;  /*changes bg color and font color for the whole page*/
+    color:black;  
+    font-family:'Gill Sans','Gill Sans MT';  /*font for all text in body with alt*/
 }
 
 header{background:#2a6644;
     color:white;
-    grid-column:1/span 2;
-    grid-row:1;
-    padding:10px;
-    line-height:100px;
-    padding-left:20px;
+    grid-column:1/3;    /*spreads header from the first column to the second*/
+    padding:10px;       /*adds 10px of space around the edges of the element*/
+    line-height:100px;    /*100px above and below text to center it*/
+    padding-left:20px;     /*adds 20px from the left margin*/
 }
 
-h1, h2,h3{font-family:'Franklin Gothic',Impact;}
+h1, h2,h3{font-family:'Franklin Gothic',Impact;}   /*sets the font of headings*/
 
-.container{display:grid;
-    grid-template-columns:20% 80%;
-    grid-template-rows:15% 1fr 5%;
-    min-height: 100vh;
-    gap: 20px;
-    width:97%;
-    height:100%;
-    margin:0 auto;
+.container{display:grid;        /*turns parent element into a grid container so that elements can be arranged as rows and columns.*/
+    grid-template-columns:20% 1fr;    /*1st column takes 20% of the container and 2nd takes remaining space*/
+    gap:20px;        /*space between columns*/
+    width:95%;     /*total width is 95% of the page*/
+    max-width:1700px;
+    margin:0 auto;      /*centers the container*/
 }
 
-nav{grid-column:1;
-grid-row:2;
+nav{grid-column:1;     /*nav takes the left column*/
 background:#b3d8c3;
-height:100%;
-align-self: stretch;
+width:100%;
+align-self: stretch;     /*expands to fill the space vertically*/
 }
 
-nav ul{list-style-type:none;
+/*ALIGNMENT:all nav links are vertically aligned*/
+nav ul{list-style-type:none;  /*removes bullets and text starts from the left*/
 text-align:left;
 font-size:20px;}
 
-nav a{display:block;
+nav a{display:block;    /*links turn into block elements to add padding*/
     padding:10px;
     padding-left:20px;
     text-decoration:none;
     color:#2a6644;
 font-weight:bold;}
 
-nav a:hover{background:#2a6644;color:white;}
+nav a:hover{background:#2a6644;color:white;}   /*selects all links in nav when hover is applied*/
 
-main{grid-column:2;
-grid-row:2;}
+main{grid-column:2;}   /*takes up second column*/
 
-footer{grid-column:1/span 2;
-grid-row:3;
+footer{grid-column:1/3;
+height:auto;
 padding:10px;
-padding-top:0;}
+padding-top:0;
+font-size:14px;}
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;}
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /*fits as many columns in available width, minw=200px but columns can expand to fill space*/
+  gap: 16px;}     /*changing 200px to 300px results in wider columns and less of them in one row*/
 
+/*REPETITION:all cards have the same styling.*/
 .card{background-color:#6ba284;
     padding:10px;
-    border-radius:5px;
-    text-align:left;
+    border-radius:5px;  /*rounds corners*/
+    text-align:left;  
     color:black;
     padding-bottom:0;
-    box-shadow:7px 7px 5px #85928b;
-    transition:transform background-color color 2s;}
+    box-shadow:7px 7px 5px #000000;  /*shadow that is 7px thick and blurs 5px*/
+    transition:transform 2s, background-color 2s;}  /*selects the time and element for transition*/
 
 .card h3{text-align:center;margin-bottom:10px;}
 
 .card p{margin-bottom:10px;font-size:16px;}
 
 .card img {
-    display:block;
+    display:block; /*turns into block element*/
     margin:0 auto;
     width: 200px;
     height: 200px;
     margin-bottom:10px;
-    object-fit:cover;
+    object-fit:cover;   /*fills the specified dimensions with cropping*/
     border-radius:5px;
-    border: 2px solid white;
-    align-self:center;}
+    border: 2px solid white;  /*thickness,style,color of border*/
+    align-self:center;}  /*alignment horizontally*/
 
-.card:hover{transform:scale(1.05); background-color:#82bf9c;}
+.card:hover{transform:scale(1.05); background-color:#b3d8c3;} /*when hover is active, element is enlarged and bg color changes*/
 
 
 main{padding:20px;
-line-height:1.5;
+line-height:1.5;   /*space between lines is 1.5 times the font size*/
 background:#b3d8c3;}
 
 main p{margin-bottom:20px;font-size:20px;}
 
+#summary{margin-bottom:40px;}
+
 main h2{margin-bottom:10px;}
 
+/*PROXIMITY:heading is close to related information.*/
+main ul{padding:10px;line-height: 1.5;padding-top:0;}
+
+main li{font-size:20px;padding-bottom:10px;}
+
+audio{margin:20px;}
