@@ -1,50 +1,64 @@
+
 /* Color palette:
    Forest green: #123C35
    Teal: #168C80
    Mint: #A8E6CF
    Pale green: #E8F5EF
-  Charcoal green: #263B36
+   Charcoal green: #263B36
 */
 
 /* CRAP design principles:
    Contrast, Repetition, Alignment and Proximity.
 */
 
-
 body {
-background-color: #E8F5EF;
-color:white;
-margin: 0;
-padding: 0;
-line-height: 1.6
-font-family:inter,sans-serif;
-font-size: 16px ;
+    background-color: #E8F5EF;
+    color: #263B36;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
 }
 
+/* Keeps the page sections organized in three columns. */
+.page-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* The header stretches across all three columns. */
 header {
-background-color: #123C35;
-color: #E8F5EF;
-padding: 30px;
-text-align: center;
+    background-color: #123C35;
+    color: #E8F5EF;
+    padding: 30px;
+    text-align: center;
+    grid-column: 1 / 4;
 }
 
+/* Arranges the navigation links in a row. */
 nav {
-background-color: #168C80;
-padding: 15px;
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-gap: 10px;
-text-align: center;
+    background-color: #168C80;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    text-align: center;
+    grid-column: 1;
 }
 
+/* Makes the main heading stand out. */
 h1 {
-font-family: Poppins, sans-serif;
-font-size: 32px;
-font-weight: 700;
-text-align: center;
-color: #E8F5EF;
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #E8F5EF;
 }
-/* Repetition: Use the same font and color for all section headings. */
+
+/* Uses the same style for section headings. */
 h2 {
     font-family: Poppins, sans-serif;
     font-size: 24px;
@@ -52,7 +66,8 @@ h2 {
     color: #168C80;
     text-align: left;
 }
-/* Alignment: Keep paragraph text left-aligned for readability. */
+
+/* Keeps paragraph text easy to read. */
 p {
     font-family: Inter, sans-serif;
     font-size: 16px;
@@ -61,6 +76,8 @@ p {
     color: #263B36;
     text-align: left;
 }
+
+/* Styles the navigation links. */
 nav a {
     color: #E8F5EF;
     text-decoration: none;
@@ -68,18 +85,63 @@ nav a {
     padding: 10px;
 }
 
+/* Changes the link background when the mouse moves over it. */
 nav a:hover {
     background-color: #123C35;
     border-radius: 8px;
 }
 
-/* Contrast: White background makes the card stand out.
-   Proximity: Padding adds space between the text and card edges.
-   Contrast: Rounded corners and shadow help separate cards from the background. */
+/* Places the main content in the middle column. */
+main {
+    grid-column: 2;
+}
+
+/* Places the cards in columns that adjust to the available space.
+   Increasing 200px to 300px means fewer cards fit in each row. */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+/* Gives each card its own background and spacing. */
 section {
-    background-color: #FFFFFF;
+    background-color: #A8E6CF;
     color: #263B36;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 10px rgba(38, 59, 54, 0.15);
 }
+
+/* Keeps the sidebar beside the main content. */
+aside {
+    grid-column: 3;
+    background-color: #A8E6CF;
+    color: #263B36;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Adds space between checklist items. */
+aside li {
+    margin-bottom: 10px;
+}
+
+/* Styles the footer across the full page. */
+footer {
+    background-color: #123C35;
+    color: #E8F5EF;
+    padding: 20px;
+    text-align: center;
+    grid-column: 1 / 4;
+}
+
+/* Keeps footer text readable against its dark background. */
+footer p {
+    color: #E8F5EF;
+    text-align: center;
+}
+
+
+  
+    
