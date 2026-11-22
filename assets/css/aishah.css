@@ -107,25 +107,40 @@ aside {
     object-fit:cover; /** object-fit:cover makes the image fill the entire container while maintaining its aspect ratio **/
     align-self:center;} /** align-self:center centers the image vertically within its container **/
 /**BUTTON**/
-.button {
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+.button,.button2 {
     display: block;         /**display block makes the button take up the full width of its container **/
     width: fit-content;     /** fit-content makes the button width adjust to its content **/
-    margin-left: auto;      /** centers the button horizontally **/
     background-color: #8fc7f0;     /** button background color **/
     color: white;
     padding: 12px 30px;      /**spacce inside the button**/
     font-size: 16px;
     border-radius: 5px;      /** rounded corners **/
+    justify-self:end;
 }
 
-.button:hover {
+.button2{ justify-self:start;} /** justify-self:start aligns the button to the left of its container **/
+.button{justify-self:end;} /** justify-self:end aligns the button to the right of its container **/
+
+.button:hover,.button2:hover {
     background-color: #5e7ef1; /** button background color on hover **/
 }
     /**FOOTER**/
     
-footer{grid-column:1/span 2;    /** span 2 means the footer will take up 2 columns in the grid **/
+footer{display:block;
+    grid-column:1/span 2;    /** span 2 means the footer will take up 2 columns in the grid **/
 grid-row:3;            /** grid-row:3 means the footer will be placed in the 3rd row of the grid **/
 padding:10px;          /** padding:10px adds space inside the footer **/
 color:azure;
 background-color:#172554;
 }
+footer p{display:block;
+    font-size:20px;
+    text-align:center;
+    line-height:0;
+margin-top:10px;}

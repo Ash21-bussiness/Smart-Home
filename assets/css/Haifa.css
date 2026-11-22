@@ -105,7 +105,7 @@ main {
 /* Increasing the minimum from 200px to 300px makes cards wider, so fewer cards can fit in each row. */
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 16px;
 }
 
