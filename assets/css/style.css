@@ -6,24 +6,28 @@
 header {
     background: #263238;
     color: white;
+    grid-column: 1 / 4;
     padding:0px 24px;
     height:120px;
+    width:100%;
     line-height: 120px;
+    font-size: 30px;
 }
 
 /**body**/
 body {
-    background: #717576;
+    background: #e7ebed;;
     color: #303030;
     font-family: 'Trebuchet MS', 'sans-serif';
     min-height: 100vh;
-    width:95%;
+    width:100%;
     margin:0 auto;}
     
 /**MAIN**/  
 main {
     padding: 20px;
     line-height: 1.5;
+    width:100%;
     background: #e7ebed;}
 
 nav{background: #547b8e;
@@ -76,4 +80,4 @@ div h2{font-size: 24px;
 /**footer**/
 footer{color:azure;
 background-color:#547b8e;
-padding:10px;}
+padding:15px;}
