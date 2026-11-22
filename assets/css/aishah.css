@@ -1,3 +1,19 @@
+/**Aishah CSS File
+colors: 
+       	Midnight Navy Blue :#172554
+      	Alice Blue :#EAF0F8
+       	Columbia Blue :#C9D8EC
+       	Light Sky Blue :#8fc7f0
+       	Cornflower Blue :#5e7ef1
+
+Contrast: Combinations of  colors for text and background to ensure readability and visual appeal. For example, the dark Midnight Navy Blue is used for the header and footer, while the light Alice Blue is used for the main content area making it easier to read the text.    
+Alignment: The alignment of text, images, and other elements is consistent throughout the website. Which makes it easier for users to navigate and understand the content. 
+Repetition: The repetition of visual elements, such as colors, fonts, and spacing, creates a sense of unity and cohesiveness throughout the website. 
+Proximity: The proximity of related elements is used in the organization of the website grouping the related elements together. 
+**/
+
+
+
 /**BOX MODEL**/
 *{box-sizing:border-box; /** box-sizing:border-box ensures that padding and border are included in the element's total width and height **/
     padding:0;
