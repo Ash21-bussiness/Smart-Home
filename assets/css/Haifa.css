@@ -7,21 +7,26 @@
    Charcoal green: #263B36
 */
 
-/* CRAP design principles:
-   Contrast, Repetition, Alignment and Proximity.
-*/
+
 
 body {
-background-color: #E8F5EF;
-color:white;
-margin: 0;
-padding: 0;
-line-height: 1.6
-font-family:inter,sans-serif;
-font-size: 16px ;
+    background-color: #E8F5EF;
+    color: #263B36;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
 }
 
-/* The header stretches across all three columns. */
+.page-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Contrast: Uses a dark background and light text to make the page title stand out. */
 header {
     background-color: #123C35;
     color: #E8F5EF;
@@ -30,7 +35,23 @@ header {
     grid-column: 1 / 4;
 }
 
-/* Arranges the navigation links in a row. */
+/* Repetition: Uses the same heading font throughout the page. */
+h1 {
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #E8F5EF;
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+/* Contrast: Keeps the introduction readable against the dark header. */
+header p {
+    color: #E8F5EF;
+    margin: 0;
+}
+
+/* Alignment: Arranges the navigation links in a grid in the first column. */
 nav {
     background-color: #168C80;
     padding: 15px;
@@ -41,25 +62,30 @@ nav {
     grid-column: 1;
 }
 
-/* Makes the main heading stand out. */
-h1 {
-    font-family: Poppins, sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    text-align: center;
+/* Repetition: Gives all navigation links the same text style and spacing. */
+nav a {
     color: #E8F5EF;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
 }
 
-/* Uses the same style for section headings. */
+/* Contrast: Changes the link background when the mouse moves over it. */
+nav a:hover {
+    background-color: #123C35;
+    border-radius: 8px;
+}
+
+/* Repetition: Uses Poppins for section headings to keep the design consistent. */
 h2 {
     font-family: Poppins, sans-serif;
     font-size: 24px;
     font-weight: 600;
-    color: #168C80;
+    color: #123C35;
     text-align: left;
 }
 
-/* Keeps paragraph text easy to read. */
+/* Proximity: Keeps paragraph text grouped neatly with its heading and card content. */
 p {
     font-family: Inter, sans-serif;
     font-size: 16px;
@@ -69,34 +95,20 @@ p {
     text-align: left;
 }
 
-/* Styles the navigation links. */
-nav a {
-    color: #E8F5EF;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px;
-}
-
-/* Changes the link background when the mouse moves over it. */
-nav a:hover {
-    background-color: #123C35;
-    border-radius: 8px;
-}
-
-/* Places the main content in the middle column. */
+/* Alignment: Places the main content in the middle column of the page layout. */
 main {
     grid-column: 2;
 }
 
-/* Places the cards in columns that adjust to the available space.
-   Increasing 200px to 300px means fewer cards fit in each row. */
+/* Alignment: Automatically arranges cards into columns based on the available space.
+   Increasing the minimum width from 200px to 300px means fewer cards fit in each row. */
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
 }
 
-/* Gives each card its own background and spacing. */
+/* Repetition: Gives every card the same background, spacing, rounded corners, and shadow. */
 section {
     background-color: #A8E6CF;
     color: #263B36;
@@ -105,7 +117,15 @@ section {
     box-shadow: 0 3px 10px rgba(38, 59, 54, 0.15);
 }
 
-/* Keeps the sidebar beside the main content. */
+/* Proximity: Keeps each card image inside its section and makes it fit the card width. */
+section img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Alignment: Places the sidebar in the third column beside the main content. */
 aside {
     grid-column: 3;
     background-color: #A8E6CF;
@@ -114,12 +134,17 @@ aside {
     border-radius: 12px;
 }
 
-/* Adds space between checklist items. */
 aside li {
     margin-bottom: 10px;
 }
 
-/* Styles the footer across the full page. */
+/* Alignment: Keeps the audio player within the main content area. */
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Contrast: Uses the same dark background as the header to create a consistent footer. */
 footer {
     background-color: #123C35;
     color: #E8F5EF;
@@ -127,12 +152,12 @@ footer {
     text-align: center;
     grid-column: 1 / 4;
 }
-
-/* Keeps footer text readable against its dark background. */
 footer p {
     color: #E8F5EF;
     text-align: center;
 }
+
+  
 
 
   
