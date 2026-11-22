@@ -20,7 +20,15 @@ font-family:inter,sans-serif;
 font-size: 16px ;
 }
 
-/* Contrast: Uses a dark background and light text to make the page title stand out. */
+/* Alignment: Creates the three-column layout for the page. */
+.page-layout {
+    display: grid;
+    grid-template-columns: 200px 1fr 250px;
+    gap: 20px;
+    padding:20px;
+}
+
+/* The header stretches across all three columns. */
 header {
     background-color: #123C35;
     color: #E8F5EF;
