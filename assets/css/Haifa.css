@@ -36,18 +36,23 @@ h1, h2,h3{font-family:'Franklin Gothic',Impact;}
 nav{grid-column:1;    
 background:#D9A6B5;
 width:100%;
-align-self: stretch;   } 
+align-self: stretch;
+  
+} 
 
 
 nav ul{list-style-type:none;  
 text-align:left;
-font-size:20px;}
+font-size:20px;
+margin-top: 20px;
+}
 
 nav a{display:block;   
     padding-left:20px;
     text-decoration:none;
     color:#303030;
-font-weight:bold;}
+font-weight:bold;
+ margin-bottom: 20px;}
 
 nav a:hover{background:#2a6644;color:white;}  
 
