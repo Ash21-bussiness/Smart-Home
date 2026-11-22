@@ -131,7 +131,7 @@ footer {
 /* Keeps footer text readable against its dark background. */
 footer p {
     color: #E8F5EF;
-    text-align: center;
+    text-align:left ;
 }
 
 
