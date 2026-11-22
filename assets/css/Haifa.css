@@ -12,21 +12,13 @@
 */
 
 body {
-    background-color: #E8F5EF;
-    color: #263B36;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    font-family: Inter, sans-serif;
-    font-size: 16px;
-}
-
-/* Keeps the page sections organized in three columns. */
-.page-layout {
-    display: grid;
-    grid-template-columns: 200px 1fr 250px;
-    gap: 20px;
-    padding: 20px;
+background-color: #E8F5EF;
+color:white;
+margin: 0;
+padding: 0;
+line-height: 1.6
+font-family:inter,sans-serif;
+font-size: 16px ;
 }
 
 /* The header stretches across all three columns. */
